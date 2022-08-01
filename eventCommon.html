@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Common</title>
+</head>
+
+<body>
+    <input id="input-field" type="text"> <button id="update">Update</button>
+    <script>
+        // direct formula
+        document.getElementById('update').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            // console.log(inputField.value);
+            const clickedTxt = document.getElementById('clickedTxt');
+            clickedTxt.innerText = inputField.value;
+            inputField.value = '';
+         })
+    </script>
+
+    <p id="clickedTxt"></p>
+    <button onclick="handlejustFunction()">Just Function</button>
+    <script>
+        // just function
+        function handlejustFunction() {
+            const clickedTxt = document.getElementById('clickedTxt');
+            clickedTxt.innerText = 'Clicked by Just Function';
+            clickedTxt.style.color = 'red';
+            clickedTxt.style.fontSize = '24px';
+        }
+    </script>
+
+    <button id="handle-addEvent">Direct addEventListner</button>
+    <script>
+        document.getElementById('handle-addEvent').addEventListener('click', function () {
+            const clickedTxtt = document.getElementById('clickedTxt');
+            clickedTxtt.innerText = 'Clicked by addEventListner';
+            clickedTxtt.style.color = 'green';
+            // clickedTxtt.style.backgroundColor = 'yellow';
+            clickedTxtt.style.fontSize = '36px';
+        });
+    </script>
+</body>
+
+</html>

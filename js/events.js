@@ -37,7 +37,7 @@ const hotPinkBtn = document.getElementById('hotPinkBtn');
 hotPinkBtn.addEventListener('click', function(){
     document.body.style.backgroundColor = 'hotpink';
 });
-// direct
+// direct || Mostly useable
 document.getElementById('khakiBtn').addEventListener('click', function(){
     document.body.style.backgroundColor = 'khaki';
 });
