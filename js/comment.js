@@ -9,5 +9,7 @@ document.getElementById('post-btn').addEventListener('click', function(){
     // 
     const commentBox = document.getElementById('comment-container');
     commentBox.appendChild(p);
+    
+    // commnet clean
     commentField.value = '';
 })
