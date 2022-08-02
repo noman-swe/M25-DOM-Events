@@ -12,7 +12,7 @@ document.getElementById('post-btn').addEventListener('click', function(){
     const commentContainer = document.getElementById('comment-container');
     commentContainer.appendChild(commentP);
 
-
+// clearing the field
     commentField.value = '';
 
-})
+});
