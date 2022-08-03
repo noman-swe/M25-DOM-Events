@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Summary</title>
+</head>
+<body>
+    <h2 id="mouse-moving">Mouse Moving</h2>
+    <h2 id="mouse-out">Mouse Moving</h2>
+    <input id="email-field" type="text" placeholder="Email">
+    <button onclick="makeYellow()">Click Me</button>
+
+
+    <script>
+        // onclick
+        function makeYellow(){
+            document.body.style.backgroundColor = 'yellow';
+        }
+
+        // add Event Listener
+        document.getElementById('email-field').addEventListener('keyup', function(event){
+            console.log(event.target.value);
+        })
+        
+        // mousemove
+        document.getElementById('mouse-moving').addEventListener('mousemove', function(){
+            console.log('Moving.... ');
+        });
+        
+        // mouseout
+        document.getElementById('mouse-out').addEventListener('mouseout', function(){
+            console.log('outing.... ');
+        });
+    </script>
+</body>
+</html>
