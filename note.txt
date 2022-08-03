@@ -49,3 +49,61 @@ document.getElementById('second-item').addEventListener('click', function(event)
 });
 
 #stopPropagation() ->stops double or triple clicks by using this function;
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// changing the color of h1 when mouseover & mouseout
+const headings = document.getElementsByTagName('h1');
+for(const heading of headings){
+    heading.style.backgroundColor = '#FF7F50';
+    heading.addEventListener('mouseover', function(event){
+        event.target.style.color = 'red';
+    });
+    heading.addEventListener('mouseout', function(event){
+        event.target.style.color = 'black';
+    });
+};
+
+// backpack-heading color change
+document.getElementById('backpack-heading').style.backgroundColor = 'green';
+
+// card
+const cards = document.getElementsByClassName('card');
+for(const card of cards){
+    // console.log(card);
+    card.style.backgroundColor = 'red';
+}
+
+// disabled & enabled
+document.getElementById('search-field').addEventListener('keyup', function(event){
+    const submitBtn = document.getElementById('submit-btn');
+    if(event.target.value == 'email'){
+        submitBtn.removeAttribute('disabled');
+    }else{
+        submitBtn.setAttribute('disabled', true);
+    };
+});
+
+// change image 
+document.getElementById('shoesToBag').addEventListener('mouseover', function(){
+    document.getElementById('shoesToBag').src='images/bags/bag-3.png';
+});
+document.getElementById('shoe-1').addEventListener('mouseout', function(){
+    document.getElementById('shoesToBag').src='images/shoes/shoe-1.png';
+});
+
+// double Click
+document.getElementById('submit-section').addEventListener('dblclick', function(){
+    document.getElementById('submit-section').style.backgroundColor = 'yellow';
+});
+document.getElementById('submit-section').addEventListener('click', function(){
+    document.getElementById('submit-section').style.backgroundColor = '#FCEAE8';
+});
+
+// delegate
+const btns = document.getElementsByClassName('btn');
+for(const btn of btns){
+    console.log(btn);
+    btn.addEventListener('click', function(event){
+        event.target.remove(event.target);
+    })
+}
