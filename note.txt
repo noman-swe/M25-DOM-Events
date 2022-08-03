@@ -40,3 +40,12 @@ document.getElementById('delete-confirm').addEventListener('keyup', function(eve
     ;
 
 });
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+25-7: Event Bubble
+document.getElementById('second-item').addEventListener('click', function(event){
+    console.log('clicked the second item');
+    event.stopPropagation();
+});
+
+#stopPropagation() ->stops double or triple clicks by using this function;
